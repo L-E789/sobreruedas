@@ -22,8 +22,8 @@ def usuarios():
     return jsonify({"datos": Listmotos}), 200
 
 
-@app.route('/motoid/<int:id>', methods=['GET'])
-def usuario_id(id):
+@app.route('/motoid', methods=['GET'])
+def usuario_id():
     id = request.args.get('id')
     motosid = Listmotos[int(id)]
     return jsonify({"InfoMotos": motosid}), 200
