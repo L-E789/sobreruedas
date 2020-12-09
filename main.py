@@ -18,12 +18,12 @@ def index():
 
 
 @app.route('/motos', methods=['GET'])
-def usuarios():
+def motos():
     return jsonify({"datos": Listmotos}), 200
 
 
 @app.route('/motoid', methods=['GET'])
-def usuario_id():
+def moto_id():
     id = request.args.get('id')
     motosid = Listmotos[int(id)]
     return jsonify({"InfoMotos": motosid}), 200
